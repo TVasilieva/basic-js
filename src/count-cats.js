@@ -1,7 +1,8 @@
 const CustomError = require("../extensions/custom-error");
 
 module.exports = function countCats(array) {
-  throw new CustomError('Not implemented');
-  // remove line with error and write your code here
-    
+  let num = 0, 
+  newArray = array.flat(),
+  howMuchCats = String(newArray).split('^^').length-1;
+        return howMuchCats;
 };
