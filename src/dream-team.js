@@ -10,8 +10,7 @@ module.exports = function createDreamTeam(members) {
         } else if(value == (value.charAt(0).toLowerCase() + value.slice(1))){
           highLetters = highLetters + value.charAt(0);
         }
-      } else if(value !== String(value)) {
-    }
+      } else return '';
   }
   return highLetters.toUpperCase().split('').sort().join('');
 };
