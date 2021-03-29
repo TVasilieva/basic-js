@@ -9,13 +9,14 @@ module.exports = function transform(arr) {
         array.pop();
       }
     }else if(arr[i] == '--double-next'){
-
+      if(i !== arr.length - 1)
+      array.push(arr[i+1]);
     }else if(arr[i] == '--double-prev'){
-
+      if (!(i === 0 ||  arr[i-2] === '--discard-next'))
+      array.push(arr[i - 1]);
     }else{
-
+      array.push(arr[i]);
     }
-
-    }
+  }
   return array;
 }
