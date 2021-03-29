@@ -10,7 +10,8 @@ module.exports = class DepthCalculator {
       } 
       currentDepth = 1;
     }
-    let result = depth, currentDepth = 1;
+    let result = depth;
+    currentDepth = 1;
     return result;
   }
 }
