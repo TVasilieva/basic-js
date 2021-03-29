@@ -7,9 +7,11 @@ module.exports = function createDreamTeam(members) {
         let value = x.trim();
         if(value == (value.charAt(0).toUpperCase() + value.slice(1))){
           highLetters = highLetters + value.charAt(0);
+        } else if(value == (value.charAt(0).toLowerCase() + value.slice(1))){
+          highLetters = highLetters + value.charAt(0);
         }
       } else if(value !== String(value)) {
     }
   }
-  return highLetters.split('').sort().join('');
+  return highLetters.toUpperCase().split('').sort().join('');
 };
